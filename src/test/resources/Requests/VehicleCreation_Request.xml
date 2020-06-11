@@ -1,0 +1,14 @@
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <SOAP-ENV:Body>
+      <VOIPServiceAvailabilityCheckRequest xmlns="http://www.qwest.com/voip/VOIPTNManagementV911">
+         <RequestType xmlns="">MMSG</RequestType>
+         <ServiceAddress xmlns="">
+            <StreetAddress>930 15th St NW</StreetAddress>
+            <City>Albuquerque</City>
+            <StateProvince>NM</StateProvince>
+            <PostalCode>87104</PostalCode>   
+         </ServiceAddress>
+         <RequestCriteria xmlns="">ALL</RequestCriteria>
+      </VOIPServiceAvailabilityCheckRequest>
+   </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
