@@ -66,17 +66,22 @@ public class MMSGOpportunityElements extends BaseClass {
 	
 	
 	public void enterMandatorydetailsinOpps() throws InterruptedException {
-		
+		System.out.println("ContactSearch  "+ContactSearch);
 		
 		
 		try{
-			
 			if(Brand.equals("Maxxia")){
 	        	EmployerSearch =  "Nikki Test";
-	        	ContactSearch  =  "Shaik Maxxia";
+	        	/*if(!ContactSearch.contains("2020")){
+	        		ContactSearch  =  "Shaik Maxxia";
+	        	}*/
+	        	
 	        }else if(Brand.equals("Remserv")){
 	        	EmployerSearch ="Health - Queensland Health";
-	        	ContactSearch  = "Shaik Remserv";
+	        	/*if(!ContactSearch.contains("2020")){
+	        		ContactSearch  = "Shaik Remserv";
+	        	}*/
+	        	
 	        }
 			
 			
@@ -99,7 +104,12 @@ public class MMSGOpportunityElements extends BaseClass {
 			//String ContactSearch = "Shaik Maxxia";
 			EntervaluebyClick(txt_Contact, txt_Contact, ContactSearch);
 			txt_Contact.sendKeys(Keys.ENTER);
-			WebElement lbl_Contact = driver.findElement(By.xpath("//li[contains(@aria-label,'" + ContactSearch + "')]//label[1]"));
+			wait(2);
+			WebElement lbl_Contact = driver.findElement(By.xpath("//span[contains(text(),'" + ContactSearch + "')]"));
+			////li[@aria-label='Shaik Remserv']
+			//(//li[contains(@aria-label,'" + ContactSearch + "')])[1]//span[2]   //this is for Shaik Maxxia or Shaik Remserv
+			//((//li[contains(@aria-label,'" + ContactSearch + "')])[1]//span)[1]
+			wait(2);
 			DoubleClickbyMouse(lbl_Contact);
 			
 			
@@ -142,6 +152,10 @@ public class MMSGOpportunityElements extends BaseClass {
 	public void clickSave() throws InterruptedException {
 		//waitTillElementVisible(Btn_Save);
 		javascriptexecutor(Btn_Save);
+		if(isElementPresent(Btn_DDCancel)){
+			Btn_DDCancel.click();
+		}
+		//wait(20);
 		wait(3);
 	}
 	
@@ -155,6 +169,10 @@ public class MMSGOpportunityElements extends BaseClass {
 	
 	@FindBy(xpath = "//li[@title='Profiling']")
 	private WebElement btn_ProfileTab;
+	@FindBy(xpath = "//span[.='Proceed']")
+	private WebElement Btn_DDProceed;
+	@FindBy(xpath = "//span[.='Cancel']")
+	private WebElement Btn_DDCancel;
 	
 	public void navigatetoprofile() throws InterruptedException {
 		wait(15);
@@ -177,6 +195,7 @@ public class MMSGOpportunityElements extends BaseClass {
 	
 	public void clickRefresh() throws InterruptedException {
 		//waitTillElementVisible(Btn_Refresh);
+		wait(5);
 		javascriptexecutor(Btn_Refresh);
 		wait(5);
 	}

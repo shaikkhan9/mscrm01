@@ -36,7 +36,7 @@ public class MMSGVehicleStepDefinition extends BaseClass {
 	
 	@Then("^Enter Vehicle Details$")
 	public void enter_Vehicle_Details() throws Throwable {
-	    mve.entervehicledetatils("New");
+	    mve.entervehicledetatils("PS");
 	}
 	
 	@Then("^Enter Dealer Quote for Vehicle$")

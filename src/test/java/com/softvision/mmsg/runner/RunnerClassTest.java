@@ -28,7 +28,7 @@ import cucumber.api.CucumberOptions;
                  dryRun = false, 
                  features = {"src/test/resources"},
                  glue = {"com.softvision.mmsg.stepdefinition"},
-                 tags = {"@OPPSDEPNO"},
+                 tags = {"@OPP"},
                  monochrome = true
 )
 

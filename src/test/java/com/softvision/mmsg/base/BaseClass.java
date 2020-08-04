@@ -69,9 +69,9 @@ public class BaseClass {
     protected static String instance = null;
     protected static int xlsRow = 0;
     protected static String Brand ="Maxxia";
-    protected static String ContactSearch;
-    protected static String EmployerSearch;
-     protected static String URL ="https://mmsg-qa.crm6.dynamics.com/main.aspx";
+    protected static String ContactSearch= null;
+    protected static String EmployerSearch= null;
+     protected static String URL ="https://mmsg-qa.crm6.dynamics.com/main.aspx?appid=d785f640-7e6c-44fd-971b-9136eb1bbf6f";
     
     static {
         // DEFAULT = QA

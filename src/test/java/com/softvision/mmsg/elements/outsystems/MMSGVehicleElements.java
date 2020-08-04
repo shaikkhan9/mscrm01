@@ -135,7 +135,7 @@ public class MMSGVehicleElements extends BaseClass {
 		wait(10);
 		txt_VehicleExteriorColor.sendKeys("White");
 		txt_VehicleInteriorColor.sendKeys("Black");
-		txt_VehicleRN.sendKeys("AU26BU2345");
+		txt_VehicleRN.sendKeys("TPA642");
 		txt_VehicleVIN.sendKeys("1GYEE63AX60219596");
 		txt_VehicleEN.sendKeys("JKHG75JBJHGJ765");
 		
